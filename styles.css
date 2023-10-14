@@ -1,21 +1,23 @@
 /* Body and Page Layout */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
 }
 
 .container {
-    background-color: white;
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Header */
@@ -25,14 +27,29 @@ h1 {
     margin: 0 0 20px;
 }
 
-/* Task List */
-#task-list {
+/* Task Lists */
+.task-section {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+    margin: 0 0 20px;
+}
+
+.task-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-.task-item {
+.task-list .task-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,7 +61,7 @@ h1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.task-item span {
+.task-list .task-item span {
     flex: 1;
     font-size: 18px;
     color: #333;
@@ -52,7 +69,7 @@ h1 {
     word-break: break-all;
 }
 
-.delete-button {
+.task-list .delete-button {
     background-color: #f44336;
     color: #fff;
     border: none;
@@ -62,7 +79,7 @@ h1 {
     transition: background-color 0.3s;
 }
 
-.delete-button:hover {
+.task-list .delete-button:hover {
     background-color: #d32f2f;
 }
 
@@ -109,4 +126,26 @@ h1 {
 
 #clear-button:hover {
     background-color: #d32f2f;
+}
+
+/* Task Filters */
+.filters {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.filter-button {
+    background-color: #666;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-button:hover {
+    background-color: #555;
 }
