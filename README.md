@@ -34,3 +34,4 @@ Please note that the **JavaScript Task Tracker** is a client-side web applicatio
 If you have any further questions or need more detailed information about any specific aspect of the application, feel free to ask.
 
 **For more details and updates, please refer to the [GitHub repository](https://github.com/rorukzz/Javascript-Task-Tracker).**
+
