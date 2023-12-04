@@ -3,7 +3,7 @@
 The **JavaScript Task Tracker** is a web application built with JavaScript for managing tasks and to-do lists. It offers a user-friendly interface for task management and tracking task completion. This document provides an overview of how to use the application, its dependencies, and its core functionality.
 
 ## Usage
-
+ 
 ### Installation and Setup
 1. Clone or download the repository from [GitHub](https://github.com/rorukzz/Javascript-Task-Tracker).
 2. Ensure you have a modern web browser installed.
