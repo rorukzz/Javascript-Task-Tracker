@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="parent-div">
-        <h1>Task Tracker</h1>
-        <div class="task-section">
-            <h2>In Progress</h2>
-            <div class="filter-buttons">
-                <button id="filter-all" class="filter-button">All</button>
-                <button id="filter-active" class="filter-button">Active</button>
-                <button id="filter-completed" class="filter-button">Completed</button>
-            </div>
-            <div id="task-list" class="task-list">
+<body class="bg-gray-100">
+    <div class="max-w-2xl mx-auto p-4">
+        <h1 class="text-3xl font-bold text-center mb-4">Task Tracker</h1>
+        <div class="filter-buttons flex space-x-2 mb-4">
+            <button id="filter-all" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">All</button>
+            <button id="filter-active" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Active</button>
+            <button id="filter-completed" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Completed</button>
+        </div>
+        <div class="mt-4">
+            <input type="text" id="task-input" class="w-full px-4 py-2 border rounded mb-2" placeholder="Add a task">
+            <input type="number" id="timer-input" class="w-full px-4 py-2 border rounded mb-2" placeholder="Add timer in minutes (optional)">
+            <button id="add-button" class="w-full px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Add</button>
+        </div>
+        <div id="in-progress-section" class="task-section mb-6 hidden">
+            <h2 class="text-2xl font-semibold mb-2">In Progress</h2>
+            <div id="task-list" class="bg-white p-4 rounded shadow-md">
                 <!-- In-progress task items will be added here dynamically -->
             </div>
-            <div>
-                <input type="text" id="task-input" class="task-input" placeholder="Add a task">
-                <button id="add-button" class="add-button">Add</button>
-            </div>
         </div>
-        <div class="task-section">
-            <h2>Completed</h2>
-            <div id="completed-list" class="task-list">
+        <div id="completed-section" class="task-section mb-6 hidden">
+            <h2 class="text-2xl font-semibold mb-2">Completed</h2>
+            <div id="completed-list" class="bg-white p-4 rounded shadow-md">
                 <!-- Completed task items will be added here dynamically -->
             </div>
         </div>
         <div>
-            <button id="clear-button" class="clear-button">Clear All</button>
+            <button id="clear-button" class="w-full px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Clear All</button>
         </div>
         <script src="scripts.js"></script>
     </div>
